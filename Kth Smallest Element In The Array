@@ -1,0 +1,10 @@
+# Programming > Checkpoint: Level 3 > Kth Smallest Element In The Array
+
+public class Solution {
+	// DO NOT MODIFY THE LIST. IT IS READ ONLY
+	public int kthsmallest(final List<Integer> a, int k) {
+	    List<Integer> b = new ArrayList<Integer>(a);
+	    Collections.sort(b);
+        return b.get(k-1);
+	}
+}
