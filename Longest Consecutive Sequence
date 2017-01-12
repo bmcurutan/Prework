@@ -1,0 +1,25 @@
+# Programming > Checkpoint: Level 5 > Longest Consecutive Sequence
+
+public class Solution {
+	public int longestConsecutive(final List<Integer> a) {
+	    List<Integer> b = new ArrayList<Integer>(a);
+	    Collections.sort(b); 
+	    int count = 1;
+	    int tempCount = 1;
+	    int start = 0;
+	    while (start < b.size()-1) {
+	        if (b.get(start)+1 == b.get(start+1)) {
+	            tempCount++;
+	            if (tempCount > count) {
+	                count = tempCount;
+	            }
+	        } else if (b.get(start) == b.get(start+1)) {
+	            // Ignore
+	        } else {
+	            tempCount = 1;
+	        }
+	        start++;
+	    }
+	    return count;
+	}
+}
