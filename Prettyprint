@@ -1,29 +1,31 @@
 # Programming > Checkpoint: Level 2 > Prettyprint
 
 public class Solution {
-	public ArrayList<ArrayList<Integer>> prettyPrint(int a) {
-	    ArrayList<ArrayList<Integer>> outer = new ArrayList<ArrayList<Integer>>();
-	    for (int i = 0; i < a+(a-1); i++) {
-	        ArrayList<Integer> inner = generateInner(i, a);
-	        outer.add(inner);
-	    }
-	    return outer;
-	}
-	
-	private ArrayList<Integer> generateInner(int i, int a) {
-	    ArrayList<Integer> inner = new ArrayList<Integer>();
-	    if (i == 0 || i == a+(a-1)-1) {
-    	    for (int j = 0; j < a+(a-1); j++) {
-    	        inner.add(a);
-    	    }
-	    } else {
-	        inner.add(a);
-	        ArrayList<Integer> temp = generateInner(i-1, a-1);
-	        for (int j = 0; j < temp.size(); j++) {
-    	        inner.add(j+1, temp.get(j));
-    	    }
-    	    inner.add(a);
-	    }
-	    return inner;
-	}
+    public ArrayList<ArrayList<Integer>> prettyPrint(int a) {
+        ArrayList<ArrayList<Integer>> outer = new ArrayList<ArrayList<Integer>>();
+        // Resulting array is nxn, where n = a+(a-1)
+        for (int i = 0; i < a+(a-1); i++) {
+            ArrayList<Integer> inner = generateInner(i, a);
+            outer.add(inner);
+        }
+        return outer;
+    }
+
+    private ArrayList<Integer> generateInner(int i, int a) {
+        ArrayList<Integer> inner = new ArrayList<Integer>();
+        // Resulting array is nxn, where n = a+(a-1)
+        if (i == 0 || i == a+(a-1)-1) {
+            for (int j = 0; j < a+(a-1); j++) {
+                inner.add(a);
+            }
+        } else {
+            inner.add(a);
+            ArrayList<Integer> temp = generateInner(i-1, a-1);
+            for (int j = 0; j < temp.size(); j++) {
+                inner.add(j+1, temp.get(j));
+            }
+            inner.add(a);
+        }
+        return inner;
+    }
 }
