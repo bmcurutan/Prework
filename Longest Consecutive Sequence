@@ -2,24 +2,33 @@
 
 public class Solution {
 	public int longestConsecutive(final List<Integer> a) {
-	    List<Integer> b = new ArrayList<Integer>(a);
-	    Collections.sort(b); 
 	    int count = 1;
-	    int tempCount = 1;
-	    int start = 0;
-	    while (start < b.size()-1) {
-	        if (b.get(start)+1 == b.get(start+1)) {
-	            tempCount++;
-	            if (tempCount > count) {
-	                count = tempCount;
-	            }
-	        } else if (b.get(start) == b.get(start+1)) {
-	            // Ignore
-	        } else {
-	            tempCount = 1;
-	        }
-	        start++;
+	    
+	    Set<Integer> set = new HashSet<Integer>();
+	    for (int i = 0; i < a.size(); i++) {
+	        set.add(a.get(i));
 	    }
+	    
+	    for (int i : set) {
+	        int currentCount = 1;
+
+	        int diff = 1;
+	        while (set.contains(i-diff)) {
+	            currentCount++;
+	            diff++;
+	        }
+	        
+	        diff = 1;
+	        while (set.contains(i+diff)) {
+	            currentCount++;
+	            diff++;
+	        }
+	        
+	        if (count < currentCount) {
+	            count = currentCount;
+	        }
+	    }
+	    
 	    return count;
 	}
 }
