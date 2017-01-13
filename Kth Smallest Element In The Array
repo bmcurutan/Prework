@@ -1,10 +1,51 @@
 # Programming > Checkpoint: Level 3 > Kth Smallest Element In The Array
 
 public class Solution {
+	private int smallestIndex;
+	private int smallest;
+	private int largest;
+
 	// DO NOT MODIFY THE LIST. IT IS READ ONLY
 	public int kthsmallest(final List<Integer> a, int k) {
-	    List<Integer> b = new ArrayList<Integer>(a);
-	    Collections.sort(b);
-        return b.get(k-1);
+		setVars(a);
+
+		int count = 1; // smallest
+		while (count < k) {
+			// Check for dupes
+			for (int i = 0; i < a.size(); i++) {
+				if (a.get(i) == this.smallest && i != this.smallestIndex) {
+					this.smallestIndex = i;
+					count++;
+				}
+			}
+
+			if (count >= k) break;
+
+			int current = this.largest;
+			for (int i = 0; i < a.size(); i++) {
+				if (a.get(i) > this.smallest && a.get(i) <= current) {
+					current = a.get(i);
+					this.smallestIndex = i;
+				}
+			}
+			this.smallest = current;
+			count++;
+		}
+		return this.smallest;
+	}
+
+	private void setVars(List<Integer> b) {
+		this.smallestIndex = 0;
+		this.smallest = b.get(0);
+		this.largest = b.get(0);
+		for (int i = 1; i < b.size(); i++) {
+			if (b.get(i) < smallest) {
+				this.smallestIndex = i;
+				this.smallest = b.get(i);
+			}
+			if (b.get(i) > largest) {
+				this.largest = b.get(i);
+			}
+		}
 	}
 }
