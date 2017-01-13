@@ -1,0 +1,28 @@
+# Programming > Checkpoint: Level 3 > Numrange
+
+public class Solution {
+	public int numRange(ArrayList<Integer> a, int b, int c) {
+	    int count = 0;
+	    
+	    for (int i = 0; i < a.size(); i++) {
+	        int sum = a.get(i);
+	        // Check A[i] also
+	        if (sum <= c) {
+	            if (sum >= b) {
+                    count++;
+	            }
+            
+    	        for (int j = i+1; j < a.size(); j++) {
+    	            sum += a.get(j);
+    	            if (sum > c) {
+    	                break;
+    	            } else if (sum >= b && sum <= c) {
+    	                count++;
+    	            }
+    	        }
+	        }
+	    }
+	    
+	    return count;
+	}
+}
