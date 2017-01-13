@@ -1,0 +1,48 @@
+# Programming > Checkpoint: Level 4 > Subtract
+
+/**
+ * Definition for singly-linked list.
+ * class ListNode {
+ *     public int val;
+ *     public ListNode next;
+ *     ListNode(int x) { val = x; next = null; }
+ * }
+ */
+public class Solution {
+	public ListNode subtract(ListNode a) {
+	    ListNode node = a;
+	    int size = size(a);
+	    if (size < 1) {
+	        return a;
+	    } else {
+	        int end = size/2;
+	        if (size%2 != 0) { end++; }
+    	    for (int i = 0; i < end; i++) {
+    	        ListNode endNode = get(a, size-i);
+    	        node.val = endNode.val - node.val;
+    	        node = node.next;
+    	    }
+	        return a;
+	    }
+	}
+	
+	private ListNode get(ListNode a, int index) {
+	    int count = 0;
+	    ListNode node = a;
+	    while (count < index) {
+	        node = node.next;
+	        count++;
+	    }
+	    return node;
+	}
+	
+	private int size(ListNode a) {
+	    int count = 0;
+	    ListNode node = a;
+	    while (node.next != null) {
+	        node = node.next;
+	        count++;
+	    }
+	    return count;
+	}
+}
