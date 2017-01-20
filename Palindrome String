@@ -1,0 +1,43 @@
+# Programming > Strings > Palindrome String
+
+public class Solution {
+	public int isPalindrome(String a) {
+	    if (!containsValid(a)) {
+	        return 1;
+	    }
+	    
+	    a = a.toLowerCase();
+	    int left = 0; 
+	    int right = a.length()-1;
+	    while (left < right) {
+	        while (!isValid(a.charAt(left))) {
+	            left++;
+	        }
+	        while (!isValid(a.charAt(right))) {
+	            right--;
+	        }
+	        if (a.charAt(left) != a.charAt(right)) {
+	            return 0;
+	        }
+	        left++;
+	        right--;
+	    }
+	    return 1;
+	}
+	
+	private boolean containsValid(String a) {
+	    for (int i = 0; i < a.length()/2; i++) {
+	        if (isValid(a.charAt(i)) || isValid(a.charAt(a.length()-i-1))) {
+	            return true;
+	        }
+	    }
+	    return false;
+	}
+	
+	private boolean isValid(char c) {
+	    if ((c >= 'a' && c <= 'z') || (c >= '0' && c <= '9')) {
+	        return true;
+	    }
+	    return false;
+	}
+}
