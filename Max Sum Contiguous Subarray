@@ -1,0 +1,25 @@
+# Programming > Arrays > Max Sum Contiguous Subarray
+
+public class Solution {
+	// DO NOT MODFIY THE LIST. 
+	public int maxSubArray(final List<Integer> a) {
+	    Set<Integer> sums = new HashSet<>();
+	    
+	    for (int i = 0; i < a.size(); i++) {
+	        int sum = a.get(i);
+	        sums.add(sum);
+	        for (int j = i+1; j < a.size(); j++) {
+	            sum += a.get(j);
+	            sums.add(sum);
+	        }
+	    }
+	    
+	    int maxSum = a.get(0);
+	    for (Integer s : sums) {
+	        if (s > maxSum) {
+	            maxSum = s;
+	        }
+	    }
+	    return maxSum;
+	}
+}
