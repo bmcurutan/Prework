@@ -1,0 +1,15 @@
+# Programming > Two Pointers > Remove Duplicates From Sorted Array
+
+public class Solution {
+	public int removeDuplicates(ArrayList<Integer> a) {
+	    for (int i = 1; i < a.size(); i++) {
+	        int first = a.get(i-1);
+	        int second = a.get(i);
+	        if (first == second) {
+	            a.remove(i);
+	            i--;
+	        } 
+	    }
+	    return a.size();
+	}
+}
