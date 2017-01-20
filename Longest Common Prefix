@@ -1,0 +1,27 @@
+# Programming > Strings > Longest Common Prefix
+
+public class Solution {
+	public String longestCommonPrefix(ArrayList<String> a) {
+	    if (a.size() < 1) {
+	        return "";
+	    } else if (a.size() == 1) { 
+	        return a.get(0);
+	    }
+	    
+	    String prefix = a.get(0);
+	    
+	    for (int i = 1; i < a.size(); i++) {
+	        String newPrefix = "";
+	        String next = a.get(i);
+	        for (int j = 0; j < prefix.length() && j < next.length(); j++) {
+	            if (prefix.charAt(j) == next.charAt(j)) {
+	                newPrefix += next.charAt(j);
+	            } else {
+	                break;
+	            }
+	        }
+	        prefix = newPrefix;
+	    }
+	    return prefix;
+	}
+}
