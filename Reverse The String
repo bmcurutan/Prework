@@ -1,0 +1,17 @@
+# Programming > Strings > Reverse The String
+
+public class Solution {
+	public String reverseWords(String a) {
+	    String b = "";
+	    
+	    String[] words = a.split(" ");
+	    for (int i = words.length-1; i >= 0; i--) {
+	        String word = words[i];
+	        if (word.length() > 0) {
+	            b += word + " ";
+	        }
+	    }
+	    
+	    return b.trim();
+	}
+}
