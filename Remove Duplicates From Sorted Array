@@ -12,13 +12,9 @@ public class Solution {
 	        if (a.get(i).intValue() != a.get(i-1).intValue()) {
 	            a.set(curr, a.get(i));
 	            curr++;
-	        } else {
-	            a.remove(i);
-	            i--;
-	            n--;
-	        }
+	        } 
 	    }
 	    
-	    return n;
+	    return curr;
 	}
 }
