@@ -2,14 +2,24 @@
 
 public class Solution {
 	public int removeDuplicates(ArrayList<Integer> a) {
-	    for (int i = 1; i < a.size(); i++) {
-	        int first = a.get(i-1);
-	        int second = a.get(i);
-	        if (first == second) {
-	            a.remove(i);
-	            i--;
-	        } 
+	    int n = a.size();
+	    if (n < 2) {
+	        return n;
 	    }
-	    return a.size();
+	    
+	    int curr = 1;
+	    for (int i = 1; i < n; i++) {
+	        if (a.get(i).intValue() != a.get(i-1).intValue()) {
+	            a.set(curr, a.get(i));
+	            curr++;
+	        }
+	    }
+	    
+	    while (curr < n) {
+	        a.remove(curr);
+	        n--;
+	    }
+	    
+	    return n;
 	}
 }
