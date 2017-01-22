@@ -1,0 +1,60 @@
+# Programming > Arrays > Spiral Order Matrix I
+
+public class Solution {
+	// DO NOT MODIFY THE LIST
+	public ArrayList<Integer> spiralOrder(final List<ArrayList<Integer>> a) {
+		 ArrayList<Integer> result = new ArrayList<Integer>();
+		 
+		 int m = a.size();
+		 int n = a.get(0).size();
+		 int top = 0;
+		 int bottom = m-1;
+		 int left = 0;
+		 int right = n-1;
+		 int direction = 0; // 0 = top, 1 = down, 2 = left, 3 = right
+	    
+	     if (m == 1) {
+	         for (int i = 0; i < n; i++) {
+	             result.add(a.get(0).get(i));
+	         }
+	         return result;
+	     } else if (n == 1) {
+	         for (int i = 0; i < m; i++) {
+	             result.add(a.get(i).get(0));
+	         }
+	         return result;
+	     }
+	    
+	     while (top <= bottom && left <= right) {
+	         switch (direction) {
+	             case 0:
+	                 for (int i = left; i <= right; i++) {
+	                     result.add(a.get(top).get(i));
+	                 }
+	                 top++;
+	                 break;
+	             case 1: 
+	                 for (int i = top; i <= bottom; i++) {
+	                     result.add(a.get(i).get(right));
+	                 }
+	                 right--;
+	                 break;
+	             case 2: 
+	                 for (int i = right; i >= left; i--) {
+	                     result.add(a.get(bottom).get(i));
+	                 }
+	                 bottom--;
+	                 break;
+	             case 3:
+	                 for (int i = bottom; i >= top; i--) {
+	                     result.add(a.get(i).get(left));
+	                 }
+	                 left++;
+	                 break;
+	         }
+	         direction = (direction+1)%4;
+	     }
+	     
+	     return result;
+	}
+}
