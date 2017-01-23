@@ -1,0 +1,20 @@
+# Programming > Arrays > Min Steps In Infinite Grid
+
+public class Solution {
+    // X and Y co-ordinates of the points in order.
+    // Each point is represented by (X.get(i), Y.get(i))
+    public int coverPoints(ArrayList<Integer> X, ArrayList<Integer> Y) {
+        int count = 0;
+        
+        for (int i = 1; i < X.size(); i++) {
+            int x1 = X.get(i-1);
+            int y1 = Y.get(i-1);
+            int x2 = X.get(i);
+            int y2 = Y.get(i);
+            
+            count += Math.max(Math.abs(x2-x1), Math.abs(y2-y1));
+        }
+        
+        return count;
+    }
+}

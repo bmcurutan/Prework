@@ -1,0 +1,29 @@
+# Programming > Arrays > Max Non Negative Sub Array
+
+public class Solution {
+	public ArrayList<Integer> maxset(ArrayList<Integer> a) {
+	    long maxSum = -1;
+	    ArrayList<Integer> maxSet = new ArrayList<>();
+	    
+	    long currSum = 0;
+	    ArrayList<Integer> currSet = new ArrayList<>();
+	    
+	    
+	    for (int i = 0; i < a.size(); i++) {
+	        if (a.get(i) >= 0) {
+	            currSum += a.get(i);
+	            currSet.add(a.get(i));
+	        } 
+            if (currSum > maxSum) {
+                maxSum = currSum;
+                maxSet = currSet;
+            } 
+            if (a.get(i) < 0) {
+                currSum = 0;
+                currSet = new ArrayList<>();
+            }
+	    }
+	    
+	    return maxSet;
+	}
+}

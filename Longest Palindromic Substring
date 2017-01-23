@@ -1,0 +1,29 @@
+# Programming > Strings > Longest Palindromic Substring
+
+public class Solution {
+	public String longestPalindrome(String a) {
+	    if (a.length() < 2) {
+	        return a;
+	    }
+	    
+	    String b = "" + a.charAt(0);
+	    for (int i = 0; i < a.length(); i++) {
+	        for (int j = i+b.length(); j < a.length(); j++) {
+	            String substring = a.substring(i, j+1);
+	            if (isPalindrome(substring) && substring.length() > b.length()) {
+	                b = substring;
+	            }
+	        }
+	    }
+	    return b;
+	}
+	
+	private boolean isPalindrome(String a) {
+	    for (int i = 0; i < a.length()/2; i++) {
+	        if (a.charAt(i) != a.charAt(a.length()-i-1)) {
+	            return false;
+	        }
+	    }
+	    return true;
+	}
+}

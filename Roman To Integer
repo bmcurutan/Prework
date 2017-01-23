@@ -1,0 +1,41 @@
+# Programming > Strings > Roman To Integer
+
+public class Solution {
+	public int romanToInt(String a) {
+	    int sum = romanize(a.charAt(0));
+	    
+	    for (int i = 1; i < a.length(); i++) {
+	        char last = a.charAt(i-1);
+	        char curr = a.charAt(i);
+	        if ((curr == 'V' || curr == 'X') && last == 'I') {
+	            sum -= 2;
+	        } else if ((curr == 'L' || curr == 'C') && last == 'X') {
+	            sum -= 20;
+	        } else if ((curr == 'D' || curr == 'M') && last == 'C') {
+	            sum -= 200;
+	        }
+	        sum += romanize(curr);
+	    }
+	    
+	    return sum;
+	}
+	
+	private int romanize(char i) {
+	    if (i == 'I') {
+	        return 1;
+	    } else if (i == 'V') {
+	        return 5;
+	    } else if (i == 'X') {
+	        return 10;
+	    } else if (i == 'L') {
+	        return 50;
+	    } else if (i == 'C') {
+	        return 100;
+	    } else if (i == 'D') {
+	        return 500;
+	    } else if (i == 'M') {
+	        return 1000;
+	    }
+	    return 0;
+	}
+}
