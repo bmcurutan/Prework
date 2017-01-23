@@ -1,0 +1,54 @@
+# Programming > Arrays > Set Matrix Zeros
+
+public class Solution {
+    private Set<Integer> rows = new HashSet<>();
+    private Set<Integer> cols = new HashSet<>();
+    
+	public void setZeroes(ArrayList<ArrayList<Integer>> a) {
+	    
+	    // m rows, n cols
+	    int m = a.size();
+	    if (m < 2) {
+	        return;
+	    }
+	    
+	    int n = a.get(0).size();
+	    for (int i = 0; i < m; i++) {
+	        for (int j = 0; j < n; j++) {
+	            if (a.get(i).get(j).intValue() == 0) {
+	                helper(a, i, j);
+	            }
+	        }
+	    }
+	    
+	    for (int i = 0; i < m; i++) {
+	        for (int j = 0; j < n; j++) {
+	            if (a.get(i).get(j) == -1) {
+	                a.get(i).set(j, 0);
+	            }
+	        }
+	    }
+	}
+	
+	private void helper(ArrayList<ArrayList<Integer>> a, int row, int col) {
+	    // Update rows
+	    if (!rows.contains(row)) {
+	        rows.add(row);
+            for (int j = 0; j < a.get(0).size(); j++) {
+                if (a.get(row).get(j) == 1) {
+                    a.get(row).set(j, -1);
+                }
+            }
+	    }
+        
+        // Update cols
+        if (!cols.contains(col)) {
+            cols.add(col);
+            for (int i = 0; i < a.size(); i++) {
+                if (a.get(i).get(col) == 1) {
+                    a.get(i).set(col, -1);
+                }
+            }
+        }
+	}
+}
