@@ -1,0 +1,51 @@
+# Programming > Linked Lists > List Cycle
+
+/**
+ * Definition for singly-linked list.
+ * class ListNode {
+ *     public int val;
+ *     public ListNode next;
+ *     ListNode(int x) { val = x; next = null; }
+ * }
+ */
+public class Solution {
+	public ListNode detectCycle(ListNode a) {
+	    if (a == null || a.next == null) {
+	        return null;
+	    }
+	    
+	    ListNode ptr1 = a;
+	    ListNode ptr2 = a;
+	    ListNode node = null;
+	    boolean firstIteration = true;
+	    
+	    // Check if cycle exists
+	    while (ptr1 != null && ptr2 != null) {
+	        if (!firstIteration && ptr1 == ptr2) {
+	            node = ptr1;
+	            break;
+	        } else if (ptr1.next == null) {
+	            return null;
+	        } else if (ptr2.next == null || ptr2.next.next == null) {
+	            return null;
+	        } 
+            ptr1 = ptr1.next;
+            ptr2 = ptr2.next.next;
+            firstIteration = false;
+	    }
+	    
+	    // No cycle
+	    if (node == null) {
+	        return node;
+	    }
+	    
+	    // Find start of cycle
+	    ptr1 = a; // Reset to head 
+	    while (ptr1 != node) {
+	        ptr1 = ptr1.next;
+	        node = node.next;
+	    }
+	    
+	    return node;
+	}
+}
