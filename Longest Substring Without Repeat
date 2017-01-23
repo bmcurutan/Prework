@@ -1,0 +1,36 @@
+# Programming > Hashing > Longest Substring Without Repeat
+
+public class Solution {
+	public int lengthOfLongestSubstring(String a) {
+	    int n = a.length();
+	    int result = 0;
+	    
+	    if (n < 2) {
+	        return n;
+	    }
+	    
+	    for (int i = 0; i < n; i++) {
+	        Set<Character> chars = new HashSet<Character>();
+	        chars.add(a.charAt(i));
+	        
+	        if (result < 1) {
+	            result++;
+	        }
+	        
+	        for (int j = i+1; j < n; j++) {
+	            char c = a.charAt(j);
+	            if (chars.contains(c)) {
+	                break;
+	            } else {
+	                chars.add(c);
+	                String substring = a.substring(i, j+1);
+	                if (substring.length() > result) {
+	                    result = substring.length();
+	                }
+	            }
+	        }
+	    }
+	    
+	    return result;
+	}
+}
