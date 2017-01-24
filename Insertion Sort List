@@ -1,0 +1,68 @@
+# Programming > Linked Lists > Insertion Sort List
+
+/**
+ * Definition for singly-linked list.
+ * class ListNode {
+ *     public int val;
+ *     public ListNode next;
+ *     ListNode(int x) { val = x; next = null; }
+ * }
+ */
+public class Solution {
+	public ListNode insertionSortList(ListNode a) {
+	    // Size <= 1
+	    if (a == null || a.next == null) {
+	        return a;
+	    }
+	    
+	    ListNode b = new ListNode(a.val);
+	    
+	    ListNode curr = a.next;
+	    while (curr != null) {
+	        b = insert(curr.val, b);
+	        curr = curr.next;
+	    }
+	    
+	    return b;
+	}
+	
+	private ListNode insert(int val, ListNode b) {
+	    // Size == 1
+	    if (b.next == null) {
+	        ListNode node = new ListNode(val);
+    	    if (val < b.val) {
+    	        node.next = b;
+    	        return node;
+    	    } else {
+    	        b.next = node;
+    	        return b;
+    	    }
+	    }
+	    
+	    // Size > 1
+	    ListNode prev = b;
+	    ListNode curr = b.next;
+
+	    while (prev != null && curr != null) {
+	        
+            if (val < prev.val) {
+                ListNode node = new ListNode(val);
+                node.next = prev;
+                return node;
+            } else if (val >= prev.val && val <= curr.val) {
+                ListNode node = new ListNode(val);
+                prev.next = node;
+                node.next = curr;
+                return b;
+            } else if (val > curr.val && curr.next == null) {
+                ListNode node = new ListNode(val);
+                curr.next = node;
+                return b;
+            }
+            prev = curr;
+            curr = curr.next;
+	    }
+	    
+	    return b;
+	}
+}
