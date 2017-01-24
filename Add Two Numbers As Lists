@@ -1,0 +1,80 @@
+# Programming > Linked Lists > Add Two Numbers As Lists
+
+/**
+ * Definition for singly-linked list.
+ * class ListNode {
+ *     public int val;
+ *     public ListNode next;
+ *     ListNode(int x) { val = x; next = null; }
+ * }
+ */
+public class Solution {
+	public ListNode addTwoNumbers(ListNode a, ListNode b) {
+	    // -1 is a valid placeholder, since a and b are non-negative
+	    ListNode result = new ListNode(-1); 
+	    ListNode currResult = result;
+	    int carry = 0;
+	    
+	    ListNode currA = a;
+	    ListNode currB = b;
+	    
+	    // If a and b are the same length
+	    while (currA != null && currB != null) {
+	        int currVal = currA.val + currB.val + carry;
+	        if (currVal < 10) {
+	            currResult.next = new ListNode(currVal);
+	            carry = 0;
+	        } else {
+	            currResult.next = new ListNode(currVal%10);
+	            carry = (currVal - (currVal%10))/10;
+	        }
+	        currResult = currResult.next;
+	        currA = currA.next;
+	        currB = currB.next;
+	    }
+	    
+	    // If a is longer than b
+	    if (currA != null && currB == null) {
+	        while (currA != null) {
+	            int currVal = currA.val + carry;
+	            if (currVal < 10) {
+    	            currResult.next = new ListNode(currVal);
+    	            carry = 0;
+    	        } else {
+    	            currResult.next = new ListNode(currVal%10);
+    	            carry = (currVal - (currVal%10))/10;
+    	        }
+    	        currResult = currResult.next;
+	            currA = currA.next;
+	        }    
+	    }
+	    
+	    // If b is longer than a
+	    else if (currB != null && currA == null) {
+	        while (currB != null) {
+	            int currVal = currB.val + carry;
+	            if (currVal < 10) {
+    	            currResult.next = new ListNode(currVal);
+    	            carry = 0;
+    	        } else {
+    	            currResult.next = new ListNode(currVal%10);
+    	            carry = (currVal - (currVal%10))/10;
+    	        }
+    	        currResult = currResult.next;
+	            currB = currB.next;
+	        }    
+	    }
+	    
+	    while (carry > 0) {
+	        if (carry < 10) {
+	            currResult.next = new ListNode(carry);
+	            carry = 0;
+	        } else {
+	            currResult.next = new ListNode(carry%10);
+    	        carry = (carry - (carry%10))/10;
+	        }
+	    }
+	    
+	    return result.next; 
+	}
+}
