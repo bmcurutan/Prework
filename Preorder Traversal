@@ -1,0 +1,48 @@
+# Programming > Trees > Preorder Traversal
+
+/**
+ * Definition for binary tree
+ * class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+public class Solution {
+	public ArrayList<Integer> preorderTraversal(TreeNode a) {
+	    ArrayList<Integer> result = new ArrayList<Integer>();
+	    result.add(a.val);
+	    
+	    if (a == null || (a.left == null && a.right == null)) {
+	        return result;
+	    }
+	    
+	    Stack<TreeNode> stack = new Stack<TreeNode>();
+	    if (a.right != null) {
+            stack.push(a.right);
+        }
+        
+        TreeNode left = a.left;
+	    while (left != null) {
+	        result.add(left.val);
+	        if (left.right != null) {
+	            stack.push(left.right);
+	        }
+	        left = left.left;
+	    }
+	    
+	    while (!stack.empty()) {
+	        left = stack.pop();
+	        while (left != null) {
+    	        result.add(left.val);
+    	        if (left.right != null) {
+    	            stack.push(left.right);
+    	        }
+    	        left = left.left;
+    	    }
+	    }
+	    
+	    return result;
+	}
+}
