@@ -1,0 +1,27 @@
+Programming > Trees > Max Depth Of Binary Tree
+
+/**
+ * Definition for binary tree
+ * class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+public class Solution {
+	public int maxDepth(TreeNode a) {
+	    int sum = 0;
+	    
+	    if (a == null) {
+	        return sum;
+	    }
+	    
+	    else if (a.left == null && a.right == null) {
+	        sum++;
+	        return sum;
+	    }
+	    
+	    return 1 + Math.max(maxDepth(a.left), maxDepth(a.right));
+	}
+}
