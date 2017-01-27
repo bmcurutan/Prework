@@ -1,0 +1,68 @@
+# Programming > Binary Search > Search For A Range
+
+public class Solution {
+	// DO NOT MODIFY THE LIST
+	public ArrayList<Integer> searchRange(final List<Integer> a, int b) {
+	    ArrayList<Integer> result = new ArrayList<Integer>();
+	    int n = a.size();
+	    
+	    // b cannot exist in a size 0 list
+	    if (n < 1) {
+	        result.add(-1);
+	        result.add(-1);
+	        return result;
+	    }
+	    
+	    // one element list; b is either equal to this element or it isn't
+	    else if (n == 1) {
+	        if (a.get(0) == b) {
+	            result.add(0);
+	            result.add(0);
+	        } 
+	        else {
+	            result.add(-1);
+	            result.add(-1);
+	        }
+	        return result;
+	    }
+	    
+	    int start = 0;
+	    int end = n-1;
+	    int mid = (start+end) / 2; // midpoint between i and j
+	    while (start < end) {
+	        // b is in the second half of the list
+	        if (a.get(mid) < b) {
+	            start = mid+1;
+	        } 
+	        
+	        // b is in the first half of the list
+	        else if (a.get(mid) >= b) {
+	            end = mid;
+	        }
+	        
+	        // get the new midpoint value
+	        mid = (start+end) / 2;
+	    }
+	    
+	    // edge case - value not found
+	    if (start == end && a.get(start) != b) {
+	        start = -1;
+	        end = -1;
+	    }
+	    
+	    // i is the start of the range
+	    // increment j until we find the end of the range
+	    else {
+	        while (end < n-1) {
+    	        if (a.get(end+1) != b) {
+    	            break;
+    	        }
+    	        end++;
+    	    }
+	    }
+	    
+	    result.add(start);
+	    result.add(end);
+	    return result;
+	}
+}
