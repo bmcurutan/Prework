@@ -1,0 +1,42 @@
+# Programming > Heaps And Maps > Distinct Numbers In Window
+
+public class Solution {
+    public ArrayList<Integer> dNums(ArrayList<Integer> A, int B) {
+        ArrayList<Integer> result = new ArrayList<Integer>();
+        
+        int n = A.size();
+        if (n < 1 || B > n) {
+            return result;
+        }
+        
+        Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+        for (int j = 0; j < B; j++) {
+            Integer val = A.get(j);
+            if (map.containsKey(val)) {
+                map.put(val, map.get(val)+1);
+            } else {
+                map.put(val, 1);
+            }
+        }
+        result.add(map.size());
+        
+        for (int i = 1; i <= n-B; i++) {
+            Integer val = A.get(i-1);
+            map.put(val, map.get(val)-1);
+            if (map.get(val) < 1) {
+                map.remove(val);
+            }      
+            
+            val = A.get(i+B-1);
+            if (map.containsKey(val)) {
+                map.put(val, map.get(val)+1);
+            } else {
+                map.put(val, 1);
+            }
+            
+            result.add(map.size());
+        }
+        
+        return result;
+    }
+}
