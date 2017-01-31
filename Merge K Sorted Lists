@@ -1,0 +1,42 @@
+# Programming > Heaps And Maps > Merge K Sorted Lists
+
+/**
+ * Definition for singly-linked list.
+ * class ListNode {
+ *     public int val;
+ *     public ListNode next;
+ *     ListNode(int x) { val = x; next = null; }
+ * }
+ */
+public class Solution {
+	public ListNode mergeKLists(ArrayList<ListNode> a) {
+	    if (a.size() < 1) {
+	        return null;
+	    } 
+	    
+	    ListNode result = new ListNode(-1); // Dummy
+	    ListNode curr = result;
+	    while (a.size() > 0) {
+	        ListNode minNode = a.get(0);
+	        int minIndex = 0;
+	        
+	        for (int i = 1; i < a.size(); i++) {
+	            if (a.get(i).val < minNode.val) {
+	                minNode = a.get(i);
+	                minIndex = i;
+	            }
+	        }
+	        
+	        curr.next = new ListNode(minNode.val);
+	        curr = curr.next;
+	        
+	        if (null != a.get(minIndex).next) {
+	            a.set(minIndex, a.get(minIndex).next);
+	        } else {
+	            a.remove(minIndex);
+	        }
+	    }
+	    
+	    return result.next;
+	}
+}
