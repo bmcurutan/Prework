@@ -1,0 +1,39 @@
+# Programming > Trees > Path Sum
+
+/**
+ * Definition for binary tree
+ * class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+public class Solution {
+	public int hasPathSum(TreeNode a, int b) {
+	    return (hasSum(a, b, 0) ? 1 : 0);
+	}
+	
+	private boolean hasSum(TreeNode a, int b, int sum) {
+	    if (a == null) {
+	        return false;
+	    } 
+	    
+	    sum += a.val;
+	    if (sum == b && a.left == null && a.right == null) {
+	        return true;
+	    } 
+	    
+	    boolean left = false;
+	    boolean right = false;
+	    
+	    if (a.left != null) {
+	        left = hasSum(a.left, b, sum);
+	    }
+	    if (a.right != null) {
+	        right = hasSum(a.right, b, sum);
+	    }
+	    
+	    return left || right;
+	}
+}
