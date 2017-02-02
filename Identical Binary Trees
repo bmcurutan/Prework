@@ -1,0 +1,52 @@
+# Programming > Trees > Identical Binary Trees
+
+/**
+ * Definition for binary tree
+ * class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+public class Solution {
+	public int isSameTree(TreeNode a, TreeNode b) {
+	    return (isSame(a, b) ? 1 : 0);
+	}
+	
+	private boolean isSame(TreeNode a, TreeNode b) {
+	    if (a == null && b == null) {
+	        return true;
+	    } else if (a.val != b.val) {
+	        //System.out.println("1*");
+	        return false;
+	    } else if (a.val == b.val && 
+	        a.left == null && b.left == null &&
+	        a.right == null && b.right == null) {
+	        return true;
+	    }
+
+	    boolean left = true;
+	    boolean right = true;
+	    
+	    if (a.left == null && b.left == null) {
+	        return true;
+	    } else if (a.left != null && b.left != null) {
+	        left = isSame(a.left, b.left);
+	    } else {
+	        //System.out.println("2*");
+	        return false;
+	    }
+	    
+	    if (a.right == null && b.right == null) {
+	        return true;
+	    } else if (a.right != null && b.right != null) {
+	        right = isSame(a.right, b.right);
+	    } else {
+	        //System.out.println("3*");
+	        return false;
+	    }
+	    
+	    return left && right;
+	}
+}
