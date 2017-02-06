@@ -1,0 +1,28 @@
+# Programming > Backtracking > Generate All Parentheses Ii
+
+public class Solution {
+	public ArrayList<String> generateParenthesis(int a) {
+	    ArrayList<String> res = new ArrayList<String>();
+	    recurse(res, "", a, a);
+	    return res;
+	}
+	
+	private void recurse(ArrayList<String> res, String s, int l, int r) {
+	    if (l > r) {
+	        return;
+	    }
+	    
+	    if (l == 0 && r == 0) {
+	        res.add(s);
+	        return;
+	    }
+	    
+	    if (l > 0) {
+	        recurse(res, s + "(", l-1, r);
+	    }
+	    
+	    if (r > 0) {
+	        recurse(res, s + ")", l, r-1);
+	    }
+	}
+}
