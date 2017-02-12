@@ -1,0 +1,22 @@
+# Programming > Bit Manipulation > Single Number II
+
+public class Solution {
+	// DO NOT MODIFY THE LIST
+	public int singleNumber(final List<Integer> a) {
+	    if (a.size() == 1) {
+	        return a.get(0);
+	    }
+	    
+	    int first = 0; // first instance
+        int second = 0; // second instance
+        for (int i = 0; i < a.size(); i++) {
+            second = second | (first & a.get(i));
+            first = first ^ a.get(i);
+            int temp = ~(first & second);
+            first = first & temp;
+            second = second & temp;
+        }
+        
+        return first;
+	}
+}
