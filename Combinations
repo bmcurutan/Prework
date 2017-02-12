@@ -1,0 +1,30 @@
+# Programming > Backtracking > Combinations
+
+public class Solution {
+	public ArrayList<ArrayList<Integer>> combine(int n, int k) {
+	    ArrayList<ArrayList<Integer>> res = new ArrayList<ArrayList<Integer>>();
+ 
+    	if (n == 0 || n < k) {
+    		return res;
+    	}
+     
+    	ArrayList<Integer> set = new ArrayList<Integer>();
+    	recurse(res, n, k, 1, set); 
+     
+    	return res;
+    }
+     
+    private void recurse(ArrayList<ArrayList<Integer>> res, int n, int k, int i, ArrayList<Integer> set) {
+    	if (set.size() == k) {
+    	    ArrayList<Integer> temp = new ArrayList<Integer>();
+    	    temp.addAll(set);
+    		res.add(temp);
+    	} else {
+        	for (int j = i; j <= n; j++) {
+        		set.add(j);
+        		recurse(res, n, k, j+1, set);
+        		set.remove(set.size()-1);
+        	}
+    	}
+    }
+}
