@@ -1,0 +1,46 @@
+# Programming > Backtracking > Permutations
+
+public class Solution {
+	public ArrayList<ArrayList<Integer>> permute(ArrayList<Integer> a) {
+	    ArrayList<ArrayList<Integer>> res = new ArrayList<ArrayList<Integer>>();
+	    if (null == a) { 
+	        return res;
+	    } else if (a.size() <= 1) {
+	        res.add(a);
+	        return res;
+	    }
+	    
+	    recurse(res, new ArrayList<Integer>(), a);
+	    return res;
+	}
+	
+	private void recurse(ArrayList<ArrayList<Integer>> res, ArrayList<Integer> start, ArrayList<Integer> a) {
+	    if (a.size() == 0) {
+	        res.add(start);
+	    } else {
+            for (int i = 0; i < a.size(); i++) {
+                ArrayList<Integer> b = copy(start);
+                b.add(a.get(i));
+                recurse(res, b, arraylistWithoutI(a, i));
+            }
+	    }
+	}
+	
+	private ArrayList<Integer> arraylistWithoutI(ArrayList<Integer> a, int i) {
+	    ArrayList<Integer> res = new ArrayList<Integer>();
+	    for (int j = 0; j < a.size(); j++) {
+	        if (j != i) {
+	            res.add(a.get(j));
+	        }
+	    }
+	    return res;
+	}
+	
+	private ArrayList<Integer> copy(ArrayList<Integer> a) {
+	    ArrayList<Integer> b = new ArrayList<Integer>();
+	    for (int i = 0; i < a.size(); i++) {
+	        b.add(a.get(i));
+	    }
+	    return b;
+	}
+}
