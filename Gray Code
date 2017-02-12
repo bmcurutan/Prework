@@ -1,0 +1,20 @@
+# Programming > Backtracking > Gray Code
+
+public class Solution {
+	public ArrayList<Integer> grayCode(int a) {
+	    if (a == 0) {
+	        ArrayList<Integer> temp = new ArrayList<Integer>();
+            temp.add(a);
+            return temp;
+	    }
+ 
+        ArrayList<Integer> res = grayCode(a-1);
+        int num = 1 << (a-1);
+ 
+        for (int i = res.size()-1; i >= 0; i--) {
+            res.add(num + res.get(i));
+        }
+ 
+        return res;
+	}
+}

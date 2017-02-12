@@ -1,0 +1,18 @@
+# Programming > Bit Manipulation > Reverse Bits
+
+public class Solution {
+	public long reverse(long a) {
+        long b = 0;
+        int count = 32;
+        
+        while (count > 0) {
+            b <<= 1;
+            long c = a & 1;
+            b |= c;
+            a >>= 1;
+            count--;
+        }
+        
+        return b;
+    }
+}
