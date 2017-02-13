@@ -1,0 +1,52 @@
+# Programming > Trees > Least Common Ancestor
+
+/**
+ * Definition for binary tree
+ * class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+public class Solution {
+	public int lca(TreeNode a, int val1, int val2) {
+	    if (!exists(a, val1) || !exists(a, val2)) {
+	        return -1;
+	    }
+	    
+	    TreeNode b = lcaNode(a, val1, val2);
+	    return b.val;
+	}
+	
+	private TreeNode lcaNode(TreeNode a, int val1, int val2) {
+	    if (a == null) {
+	        return null;
+	    }
+	    
+	    if (a.val == val1 || a.val == val2) {
+	        return a;
+	    }
+	    
+	    TreeNode left = lcaNode(a.left, val1, val2);
+	    TreeNode right = lcaNode(a.right, val1, val2);
+	    
+	    if (left != null && right != null) {
+	        return a;
+	    } else if (left != null) {
+	        return left;
+	    } else {
+	        return right;
+	    }
+	}
+	
+    private boolean exists(TreeNode a, int val) {
+	    if (a == null) {
+	        return false;
+	    } else if (a.val == val) {
+	        return true;
+	    }
+	    
+        return exists(a.left, val) || exists(a.right, val);
+    }
+}
