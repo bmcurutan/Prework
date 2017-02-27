@@ -88,7 +88,6 @@ Small dataset 2.
 public class PasswordSecurity {
     public static String encrypt(String in) {
         String[] pwds = in.split(" ");
-        String res = null;
 
         // Pre-process to check for early exit
         String alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -102,21 +101,17 @@ public class PasswordSecurity {
             }
         }
 
-        if (res == null) {
-            if (!containsPwd) {
-                res = alpha; // Just use the default alphabet
+        if (!containsPwd) {
+            return alpha; // Just use the default alphabet
+        } else {
+            List<String> list = new ArrayList<>();
+            encryptRec(new ArrayList<>(), list, pwds);
+            if (list.size() > 0) {
+                return list.get(0);
             } else {
-                List<String> list = new ArrayList<>();
-                encryptRec(new ArrayList<>(), list, pwds);
-                if (list.size() > 0) {
-                    return list.get(0);
-                } else {
-                    return "IMPOSSIBLE";
-                }
+                return "IMPOSSIBLE";
             }
         }
-
-        return res;
     }
 
     private static String actualLetters(List<Integer> letters) {

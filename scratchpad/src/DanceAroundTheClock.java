@@ -77,23 +77,34 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.*;
 
 public class DanceAroundTheClock {
     public static String dance(int num, int dancer, int turns) {
-        int[] dancers = new int[num];
+        Integer[] dancers = new Integer[num];
         for (int i = 0; i < num; i++) {
             dancers[i] = i+1;
         }
         //printArr(dancers);
 
+        // dancers old, 0 even / 1 odd, dancers new
+        Map<Integer[], Map<Integer, Integer[]>> cache = new HashMap<>();
+
         for (int i = 1; i <= turns%num; i++) {
             if (i % 2 == 1) { // odd
-                dancers = oddTurn(dancers);
-                //printArr(dancers);
+                if (cache.containsKey(dancers) && cache.get(dancers).containsKey(1)) {
+                    dancers = cache.get(dancers).get(1);
+                } else {
+                    dancers = oddTurn(dancers);
+                }
             } else {
-                dancers = evenTurn(dancers);
-                //printArr(dancers);
+                if (cache.containsKey(dancers) && cache.get(dancers).containsKey(0)) {
+                    dancers = cache.get(dancers).get(0);
+                } else {
+                    dancers = evenTurn(dancers);
+                }
             }
+            //printArr(dancers);
         }
 
         for (int i = 0; i < num; i++) {
@@ -107,14 +118,14 @@ public class DanceAroundTheClock {
         return "";
     }
 
-    private static void printArr(int[] arr) {
+    private static void printArr(Integer[] arr) {
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");
         }
         System.out.println();
     }
 
-    private static int[] oddTurn(int[] arr) {
+    private static Integer[] oddTurn(Integer[] arr) {
         // 1-2, 3-4, 5-6, 7-8
         for (int i = 0; i < arr.length-1; i+=2) {
             int temp = arr[i];
@@ -124,7 +135,7 @@ public class DanceAroundTheClock {
         return arr;
     }
 
-    private static int[] evenTurn(int[] arr) {
+    private static Integer[] evenTurn(Integer[] arr) {
         //2-3, 4-5, 6-7, 8-1
         for (int i = 1; i < arr.length-2; i+=2) {
             int temp = arr[i];
