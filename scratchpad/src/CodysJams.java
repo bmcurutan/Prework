@@ -83,25 +83,34 @@ public class CodysJams {
         }
 
         for (int i = 0; i < arr.length; i++) {
-            int regPrice = (int)(arr[i] / 0.75);
-            if (map.containsKey(regPrice) && map.get(regPrice) > 0) {
-                res += " " + arr[i];
-                map.put(regPrice, map.get(regPrice)-1);
+            int price = arr[i];
+            if (map.containsKey(price) && map.get(price) > 0) {
+                map.put(price, map.get(price) - 1);
+                int regPrice = (int) (price / 0.75);
+                if (map.containsKey(regPrice) && map.get(regPrice) > 0) {
+                    res += " " + arr[i];
+                    map.put(regPrice, map.get(regPrice) - 1);
+                }
             }
         }
 
         return res;
     }
 
-    private static final String FILENAME = "/Users/biancacurutan/Documents/bmcurutan/scratchpad/scratchpad/src/IO/A-small-practice.in";
-    //private static final String FILENAME = "/Users/biancacurutan/Documents/bmcurutan/scratchpad/scratchpad/src/IO/A-large-practice.in";
-    private static final String OUTFILENAME = "/Users/biancacurutan/Documents/bmcurutan/scratchpad/scratchpad/src/IO/A-small-practice.out";
+    //private static final String FILENAME = "/Users/biancacurutan/Documents/bmcurutan/scratchpad/scratchpad/src/IO/A-small-practice.in";
+    //private static final String OUTFILENAME = "/Users/biancacurutan/Documents/bmcurutan/scratchpad/scratchpad/src/IO/A-small-practice.out";
+    private static final String FILENAME = "/Users/biancacurutan/Documents/bmcurutan/scratchpad/scratchpad/src/IO/A-large-practice.in";
+    private static final String OUTFILENAME = "/Users/biancacurutan/Documents/bmcurutan/scratchpad/scratchpad/src/IO/A-large-practice.out";
+
     public static void main(String[] args) {
         //int[] test1 = { 15, 20, 60, 75, 80, 100 };
         //System.out.println("Case #1:" + salePrices(test1));
 
         //int[] test2 = { 9, 9, 12, 12, 12, 15, 16, 20 };
         //System.out.println("Case #2:" + salePrices(test2));
+
+        //int[] test2 = { 750000000, 1000000000 };
+        //System.out.println("Case #3:" + salePrices(test2));
 
         BufferedReader br = null;
         FileReader fr = null;
