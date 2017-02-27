@@ -1,5 +1,3 @@
-package NotDone;
-
 /*
 Problem C. Polynesiaglot
 This contest is open for practice. You can try every problem as many times as you like, though we won't
@@ -87,6 +85,10 @@ In Case #2 (which would not appear in the Small dataset 1), suppose that the two
 the only consonant is h. Then the possible valid words of length 2 are: aa, ae, ea, ee, ha, he.
  */
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.*;
 
 public class Polynesiaglot {
@@ -97,33 +99,46 @@ public class Polynesiaglot {
             return res;
         }
 
-        Set<String> set = new HashSet<>();
-        polyRec("", set, c, v, len);
+        Set<ArrayList<String>> set = new HashSet<>();
+        polyRec(new ArrayList<String>(), set, c, v, len);
         return set.size() % 1000000007;
     }
 
-    private static void polyRec(String word, Set<String> set, int c, int v, int len) {
-        if (word.length() == len) {
+    private static void polyRec(ArrayList<String> word, Set<ArrayList<String>> set, int c, int v, int len) {
+        //System.out.println(word);
+        if (word.size() == len) {
             if (isValid(word)) {
                 set.add(word);
-                System.out.println(word);
+                //System.out.println(word);
             }
             return;
         }
 
-        polyRec(word + "c", set, c, v, len);
-        polyRec(word + "v", set, c, v, len);
+        for (int i = 0; i < c; i++) {
+            if (word.size() > 0 && word.get(word.size()-1).contains("c")) {
+                // Do nothing, can't have two consonants side by side
+            } else {
+                word.add("c" + i);
+                polyRec(word, set, c, v, len);
+                word.remove(word.size()-1);
+            }
+        }
+        for (int j = 0; j < v; j++) {
+            word.add("v" + j);
+            polyRec(word, set, c, v, len);
+            word.remove(word.size()-1);
+        }
     }
 
-    private static boolean isValid(String word) {
+    private static boolean isValid(ArrayList<String> word) {
         // All words consist of letters. Letters are either consonants or vowels.
         // Any consonant in a word must be immediately followed by a vowel.
-        if (word == null || word.length() == 0 || word.charAt(word.length()-1) == 'c') {
+        if (word == null || word.size() == 0 || word.get(word.size()-1).contains("c")) {
             return false;
         }
 
-        for (int i = 0; i < word.length()-1; i++) {
-            if (word.charAt(i) == 'c' && word.charAt(i+1) != 'v') {
+        for (int i = 0; i < word.size()-1; i++) {
+            if (word.get(i).contains("c") && !word.get(i+1).contains("v")) {
                 return false;
             }
         }
@@ -131,8 +146,54 @@ public class Polynesiaglot {
         return true;
     }
 
+    //private static final String FILENAME = "/Users/biancacurutan/Documents/bmcurutan/scratchpad/scratchpad/src/IO/C-small-practice-1.in";
+    //private static final String OUTFILENAME = "/Users/biancacurutan/Documents/bmcurutan/scratchpad/scratchpad/src/IO/C-small-practice-1.out";
+    private static final String FILENAME = "/Users/biancacurutan/Documents/bmcurutan/scratchpad/scratchpad/src/IO/C-small-practice-2.in";
+    private static final String OUTFILENAME = "/Users/biancacurutan/Documents/bmcurutan/scratchpad/scratchpad/src/IO/C-small-practice-2.out";
+
     public static void main(String[] args) {
         //System.out.println(poly(1, 1, 4)); // 5
-        System.out.println(poly(1, 2, 2)); // 6
+        //System.out.println(poly(1, 2, 2)); // 6
+        System.out.println(poly(43, 47, 15));
+
+        BufferedReader br = null;
+        FileReader fr = null;
+        PrintWriter pw = null;
+        try {
+            fr = new FileReader(FILENAME);
+            br = new BufferedReader(fr);
+            pw = new PrintWriter(OUTFILENAME, "UTF-8");
+
+            int numTests = Integer.parseInt(br.readLine());
+            for (int i = 0; i < numTests; i++) {
+                String line = br.readLine();
+                String[] tokens = line.split(" ");
+
+                int c = Integer.parseInt(tokens[0]);
+                int v = Integer.parseInt(tokens[1]);
+                int len = Integer.parseInt(tokens[2]);
+
+                pw.println("Case #" + (i+1) + ": " + poly(c, v, len));
+            }
+
+            /*String currentLine;
+            while ((currentLine = br.readLine()) != null) {
+                System.out.println(currentLine);
+            }*/
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (br != null)
+                    br.close();
+                if (fr != null)
+                    fr.close();
+                if (pw != null)
+                    pw.close();
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+        }
     }
 }
