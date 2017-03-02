@@ -4,6 +4,7 @@
     <list default="true" id="a8d3141a-1d46-48f0-b5e6-fcc710019c23" name="Default" comment="">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CodysJams.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/DanceAroundTheClock.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/FirstNonNegativeInteger.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/IO/A-large-practice.in" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/IO/A-small-practice.in" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/IO/C-large-practice.in" />
@@ -48,11 +49,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.8564397">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="ZigZagTree.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="ZigZagTree.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/ZigZagTree.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="18">
-                  <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+                <state relative-caret-position="216">
+                  <caret line="30" column="34" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
                   <folding />
                 </state>
               </provider>
@@ -73,9 +74,17 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="36">
                   <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-                  <folding>
-                    <element signature="e#0#1916#0" expanded="true" />
-                  </folding>
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="FirstNonNegativeInteger.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/FirstNonNegativeInteger.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="270">
+                  <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -84,7 +93,7 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="D-small-practice-1.out" pinned="false" current-in-tab="false">
+          <file leaf-file-name="D-small-practice-1.out" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/IO/D-small-practice-1.out">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="126">
@@ -94,7 +103,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="PasswordSecurity.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="PasswordSecurity.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/PasswordSecurity.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="219">
@@ -173,8 +182,9 @@
         <option value="$PROJECT_DIR$/src/NotDone/ReplaceSpacesInCString.java" />
         <option value="$PROJECT_DIR$/src/ReplaceSpacesInCString.java" />
         <option value="$PROJECT_DIR$/src/NotDone/ZigZagTree.java" />
-        <option value="$PROJECT_DIR$/src/ZigZagTree.java" />
         <option value="$PROJECT_DIR$/src/PasswordSecurity.java" />
+        <option value="$PROJECT_DIR$/src/ZigZagTree.java" />
+        <option value="$PROJECT_DIR$/src/FirstNonNegativeInteger.java" />
       </list>
     </option>
   </component>
@@ -327,7 +337,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -380,8 +392,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -832,13 +842,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/NotDone/SiblingTreeNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/LongestSubstring.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1144,9 +1147,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#1916#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1173,10 +1174,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/PasswordSecurity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="85" column="13" selection-start-line="85" selection-start-column="13" selection-end-line="85" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ZigZagTree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="216">
+          <caret line="30" column="34" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
           <folding />
         </state>
       </provider>
@@ -1189,10 +1198,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PasswordSecurity.java">
+    <entry file="file://$PROJECT_DIR$/src/FirstNonNegativeInteger.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="85" column="13" selection-start-line="85" selection-start-column="13" selection-end-line="85" selection-end-column="13" />
+        <state relative-caret-position="270">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
         </state>
       </provider>
