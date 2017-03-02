@@ -1,0 +1,51 @@
+# Programming > Trees > Zig Zag Level Order Traversal Bt
+
+/**
+ * Definition for binary tree
+ * class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+public class Solution {
+	public ArrayList<ArrayList<Integer>> zigzagLevelOrder(TreeNode t) {
+	    ArrayList<ArrayList<Integer>> res = new ArrayList<ArrayList<Integer>>();
+	    if (t == null) {
+            return res;
+        }
+
+        Map<TreeNode, Boolean> map = new LinkedHashMap<TreeNode, Boolean>(); // true go to the right, false go to the left
+        map.put(t, true);
+        ArrayList<Integer> temp = new ArrayList<Integer>();
+        
+        boolean last = false;
+        while (!map.isEmpty()) {
+            Map.Entry<TreeNode, Boolean> entry = map.entrySet().iterator().next();
+            map.remove(entry.getKey());
+
+            if (entry.getValue() != last && temp.size() > 0) {
+                res.add(temp);
+                temp = new ArrayList<Integer>();
+            }
+            last = entry.getValue();
+
+            if (entry.getValue()) {
+                temp.add(entry.getKey().val);
+            } else {
+                temp.add(0, entry.getKey().val);
+            }
+
+            if (entry.getKey().left != null) {
+                map.put(entry.getKey().left, !entry.getValue());
+            }
+            if (entry.getKey().right != null) {
+                map.put(entry.getKey().right, !entry.getValue());
+            }
+        }
+
+        res.add(temp);
+        return res;
+	}
+}

@@ -1,0 +1,40 @@
+# Programming > Hashing > 2 Sum
+
+public class Solution {
+	public ArrayList<Integer> twoSum(final List<Integer> a, int b) {
+	    ArrayList<Integer> res = new ArrayList<>();
+	    if (a == null || a.size() == 0) {
+	        return res;
+	    }
+
+        else if (a.size() == 1 && a.get(0) != b) {
+            return res;
+        }
+	    
+	    int index1 = 0;
+	    int index2 = Integer.MAX_VALUE;
+	    
+	    Map<Integer, Integer> map = new HashMap<>();
+	    map.put(a.get(0), 0);
+	    
+	    for (int i = 1; i < a.size(); i++) {
+	        if (map.containsKey(b-a.get(i)) && i+1 < index2) {
+                index1 = map.get(b-a.get(i))+1;
+                index2 = i+1;
+	        }
+	        if (map.containsKey(a.get(i))) {
+	            map.put(a.get(i), Math.min(map.get(a.get(i)), i));
+	        } else {
+	            map.put(a.get(i), i);
+	        }
+	    }
+	    
+	    if (index1 == 0) {
+	        return res;
+	    }
+	    
+	    res.add(index1);
+	    res.add(index2);
+	    return res;
+	}
+}

@@ -1,0 +1,21 @@
+# Programming > Math > Power Of Two Integers
+
+public class Solution {
+    public boolean isPower(int a) {
+        if (a == 1) {
+            return true;
+        }
+        for (int i = 2; i < a; i++) {
+            for (int p = 2; p < a; p++) {
+                int pow = (int)Math.pow(i, p);
+                if (pow == a) {
+                    return true;
+                }
+                if (pow > a) {
+                    break;
+                }
+            }
+        }
+        return false;
+    }
+}
