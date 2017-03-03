@@ -52,7 +52,7 @@
           <file leaf-file-name="ZigZagTree.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/ZigZagTree.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="216">
+                <state relative-caret-position="540">
                   <caret line="30" column="34" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
                   <folding />
                 </state>
@@ -79,11 +79,21 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="FirstNonNegativeInteger.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="FirstNonNegativeInteger.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/FirstNonNegativeInteger.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="270">
+                <state relative-caret-position="104">
                   <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="PrintTreeBreadthFirst.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/PrintTreeBreadthFirst.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="378">
+                  <caret line="32" column="9" selection-start-line="20" selection-start-column="8" selection-end-line="32" selection-end-column="9" />
                   <folding />
                 </state>
               </provider>
@@ -97,7 +107,7 @@
             <entry file="file://$PROJECT_DIR$/src/IO/D-small-practice-1.out">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="126">
-                  <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+                  <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
                   <folding />
                 </state>
               </provider>
@@ -106,7 +116,7 @@
           <file leaf-file-name="PasswordSecurity.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/PasswordSecurity.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="219">
+                <state relative-caret-position="1458">
                   <caret line="85" column="13" selection-start-line="85" selection-start-column="13" selection-end-line="85" selection-end-column="13" />
                   <folding />
                 </state>
@@ -337,9 +347,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -392,6 +401,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -975,13 +985,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PrintTreeBreadthFirst.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/src.zip!/java/io/FileReader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="166">
@@ -1155,7 +1158,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="13" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1176,7 +1178,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PasswordSecurity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
+        <state relative-caret-position="1458">
           <caret line="85" column="13" selection-start-line="85" selection-start-column="13" selection-end-line="85" selection-end-column="13" />
           <folding />
         </state>
@@ -1184,7 +1186,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ZigZagTree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
+        <state relative-caret-position="540">
           <caret line="30" column="34" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
           <folding />
         </state>
@@ -1193,15 +1195,23 @@
     <entry file="file://$PROJECT_DIR$/src/IO/D-small-practice-1.out">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
-          <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/FirstNonNegativeInteger.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
+        <state relative-caret-position="104">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PrintTreeBreadthFirst.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="32" column="9" selection-start-line="20" selection-start-column="8" selection-end-line="32" selection-end-column="9" />
           <folding />
         </state>
       </provider>
