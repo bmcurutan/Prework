@@ -1,0 +1,21 @@
+# Programming > Greedy > Assign Mice To Holes
+
+public class Solution {
+    public int mice(ArrayList<Integer> a, ArrayList<Integer> b) {
+        if (a == null || a.size() == 0 || b == null || b.size() == 0) {
+            return 0;
+        }
+        
+        Collections.sort(a);
+        Collections.sort(b);
+        
+        int max = 0;
+        for (int i = 0; i < a.size(); i++) {
+            if (Math.abs(a.get(i) - b.get(i)) > max) {
+                max = Math.abs(a.get(i) - b.get(i));
+            }
+        }
+        
+        return max;
+    }
+}
