@@ -1,0 +1,23 @@
+# Programming > Strings > Implement Str Str
+
+public class Solution {
+	public int strStr(final String haystack, final String needle) {
+	    if (haystack == null || haystack.length() == 0 || needle == null || needle.length() == 0) {
+	        return -1;
+	    }
+	    
+	    for (int i = 0; i <= haystack.length()-needle.length(); i++) {
+            for (int j = 0; j < needle.length(); j++) {
+                if (i+j < haystack.length() && haystack.charAt(i+j) != needle.charAt(j)) {
+                    break;
+                } else {
+                    if (j == needle.length()-1) {
+                        return i;
+                    }
+                }
+            }
+	    }
+	    
+	    return -1;
+	}
+}
