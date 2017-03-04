@@ -1,0 +1,53 @@
+# Programming > Graphs > Sum Of Fibonacci Numbers
+
+public class Solution {
+    private Map<Integer, Integer> map;
+    
+    public Solution() {
+        map = new HashMap<Integer, Integer>();
+    }
+    
+	public int fibsum(int a) {
+	    for (int i = 1; i <= a; i++) {
+	        if (fib(i) > a) {
+	            break;
+	        }
+	        if (!map.containsKey(i)) {
+	            map.put(i, fib(i));
+	        }
+	    }
+	    
+	    return fibRec(a);
+	}
+	
+	private int fibRec(int a) {
+	    if (map.containsValue(a)) {
+	        return 1;
+	    }
+	    
+	    int highest = 1;
+	    for (int i : map.values()) {
+	        if (i > highest && i < a) {
+	            highest = i;
+	        } else if (i > a) {
+	            break;
+	        }
+	    }
+	    
+	    return 1 + fibRec(a-highest);
+	}
+	
+	private int fib(int n) {
+	    if (n < 3) {
+	        return n;
+	    }
+
+	    if (!map.containsKey(n)) {
+	        int res = fib(n-1) + fib(n-2);
+	        map.put(n, res);
+	        return res;
+	    } 
+	        
+	    return map.get(n);
+	}
+}
