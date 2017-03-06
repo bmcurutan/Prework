@@ -1,0 +1,50 @@
+# Programming > Checkpoint: Level 6 > Inversions
+
+public class Solution {
+	public int countInversions(ArrayList<Integer> a) {
+	    int res = 0;
+	    
+	    if (a == null || a.size() <= 1) {
+	        return res;
+	    }
+	    
+	    int mid = a.size()/2; 
+        ArrayList<Integer> left = subArrayList(a, 0, mid);
+        ArrayList<Integer> right = subArrayList(a, mid, a.size());
+    
+        return countInversions(left) + countInversions(right) + mergeSort(a, left, right);
+	}
+	
+	private static int mergeSort(ArrayList<Integer> a, ArrayList<Integer> left, ArrayList<Integer> right) {
+        int count = 0;
+        int i = 0;
+        int j = 0;
+        
+        while (i < left.size() || j < right.size()) {
+            if (i == left.size()) {
+                a.set(i+j, right.get(j));
+                j++;
+            } else if (j == right.size()) {
+                a.set(i+j, left.get(i));
+                i++;
+            } else if (left.get(i) <= right.get(j)) {
+                a.set(i+j, left.get(i));
+                i++;                
+            } else {
+                a.set(i+j, right.get(j));
+                count += left.size() - i;
+                j++;
+            }
+        }
+        
+        return count;
+    }
+    
+    private static ArrayList<Integer> subArrayList(ArrayList<Integer> a, int start, int end) {
+        ArrayList<Integer> b = new ArrayList<Integer>();
+        for (int i = start; i < end; i++) {
+            b.add(a.get(i));
+        }
+        return b;
+    }
+}
