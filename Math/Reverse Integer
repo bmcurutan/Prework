@@ -1,0 +1,23 @@
+# Programming > Math > Reverse Integer
+
+public class Solution {
+	public int reverse(int a) {
+	    String res = "";
+	    
+	    if (a < 0) {
+	        res += "-";
+	        a *= -1;
+	    }
+	    
+	    while (a > 0) {
+	        res += (a % 10);
+	        a /= 10;
+	    }
+	    
+	    try {
+	        return Integer.parseInt(res);
+	    } catch (Exception e) {
+	        return 0;
+	    }
+	}
+}
