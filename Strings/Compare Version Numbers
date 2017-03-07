@@ -1,0 +1,37 @@
+# Programming > Strings > Compare Version Numbers
+
+import java.math.BigInteger;
+
+public class Solution {
+	public int compareVersion(String a, String b) {
+	    if (a == null || b == null) {
+	        return -1;
+	    }
+	    
+	    String[] a1 = a.split("\\.");
+	    String[] b1 = b.split("\\.");
+	    
+	    //System.out.println(Arrays.toString(a1) + " " + Arrays.toString(b1));
+	    
+	    int i = 0;
+	    while (i < a1.length || i < b1.length) {
+	        BigInteger ai = new BigInteger("0");
+	        if (i < a1.length) {
+	            ai = new BigInteger(a1[i]);
+	        }
+	        
+	        BigInteger bi = new BigInteger("0");
+	        if (i < b1.length) {
+	            bi = new BigInteger(b1[i]);
+	        }
+	        
+	        //System.out.println(ai + " " + bi);
+	        if (ai.compareTo(bi) != 0) { 
+	            return ai.compareTo(bi);
+	        }
+	        i++;
+	    }
+	    
+	    return 0;
+	}
+}
