@@ -1,0 +1,57 @@
+# Programming > Trees > Root To Leaf Paths With Sum
+
+/**
+ * Definition for binary tree
+ * class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+public class Solution {
+	public ArrayList<ArrayList<Integer>> pathSum(TreeNode root, int sum) {
+	    ArrayList<ArrayList<Integer>> res = new ArrayList<ArrayList<Integer>>();
+	    if (root == null) {
+	        return res;
+	    }
+	    
+	    ArrayList<Integer> temp = new ArrayList<Integer>();
+	    temp.add(root.val);
+	    sum(res, temp, root, root.val, sum);
+	    return res;
+	}
+	
+	private void sum(ArrayList<ArrayList<Integer>> res, ArrayList<Integer> temp, TreeNode root, int currSum, int sum) {
+	    if (root == null) {
+	        return;
+	    }
+	    if (currSum == sum && root.left == null && root.right == null) {
+	        res.add(temp);
+	        return;
+	    }
+	    
+	    if (root.left != null) {
+	        ArrayList<Integer> res2 = copy(temp);
+	        res2.add(root.left.val);
+	        sum(res, res2, root.left, currSum + root.left.val, sum);
+	    }
+	    if (root.right != null) {
+	        ArrayList<Integer> res2 = copy(temp);
+	        res2.add(root.right.val);
+	        sum(res, res2, root.right, currSum + root.right.val, sum);
+	    }
+	}
+	
+	private ArrayList<Integer> copy(ArrayList<Integer> a) {
+	    ArrayList<Integer> res = new ArrayList<Integer>();
+	    if (a == null) {
+	        return res;
+	    }
+	    
+	    for (int i = 0; i < a.size(); i++) {
+	        res.add(a.get(i));
+	    }
+	    return res;
+	}
+}
