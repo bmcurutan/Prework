@@ -29,6 +29,8 @@ public class Solution {
 	    int start = 0;
 	    int end = n-1;
 	    int mid = (start+end) / 2; // midpoint between i and j
+	    int highest = 0;
+	    
 	    while (start < end) {
 	        // b is in the second half of the list
 	        if (a.get(mid) < b) {
@@ -38,6 +40,10 @@ public class Solution {
 	        // b is in the first half of the list
 	        else if (a.get(mid) >= b) {
 	            end = mid;
+	            
+	            if (a.get(mid) == b && mid > highest) {
+                    highest = mid;
+                }
 	        }
 	        
 	        // get the new midpoint value
@@ -45,24 +51,25 @@ public class Solution {
 	    }
 	    
 	    // edge case - value not found
-	    if (start == end && a.get(start) != b) {
-	        start = -1;
-	        end = -1;
+	    if (a.get(start) != b) {
+	        result.add(-1);
+	        result.add(-1);
+	        return result;
 	    }
 	    
 	    // i is the start of the range
 	    // increment j until we find the end of the range
 	    else {
-	        while (end < n-1) {
-    	        if (a.get(end+1) != b) {
+	        while (highest < n-1) {
+    	        if (a.get(highest+1) != b) {
     	            break;
     	        }
-    	        end++;
+    	        highest++;
     	    }
 	    }
 	    
 	    result.add(start);
-	    result.add(end);
+	    result.add(highest);
 	    return result;
 	}
 }
