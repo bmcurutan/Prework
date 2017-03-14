@@ -1,0 +1,18 @@
+# Programming > Math > Trailing Zeros In Factorial
+
+public class Solution {
+	public int trailingZeroes(int a) {
+	    if (a < 5) {
+	        return 0;
+	    } 
+	    
+	    int count = 0;
+	    int pow = 1;
+	    while (a / Math.pow(5, pow) >= 1) {
+	        count += a / Math.pow(5, pow);
+	        pow++;
+	    }
+	    
+	    return count;
+	}
+}
