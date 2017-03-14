@@ -1,0 +1,42 @@
+# Programming > Linked Lists > Merge Two Sorted Lists
+
+/**
+ * Definition for singly-linked list.
+ * class ListNode {
+ *     public int val;
+ *     public ListNode next;
+ *     ListNode(int x) { val = x; next = null; }
+ * }
+ */
+public class Solution {
+	public ListNode mergeTwoLists(ListNode a, ListNode b) {
+	    if (a == null && b == null) {
+	        return null;
+        } else if (a == null) {
+	        return b;
+	    } else if (b == null) {
+	        return a;
+	    }
+	    
+	    ListNode res = new ListNode(-1);
+	    ListNode head = res;
+	    
+	    ListNode currA = a;
+	    ListNode currB = b;
+	    
+	    while (currA != null || currB != null) {
+            if ((currA != null && currB != null && currA.val < currB.val) ||
+                (currA != null && currB == null)) {
+	            res.next = new ListNode(currA.val);
+	            currA = currA.next;
+            } else if ((currA != null && currB != null && currB.val <= currA.val) ||
+                (currB != null && currA == null)) {
+                res.next = new ListNode(currB.val);
+                currB = currB.next;
+            }
+            res = res.next;
+	    }
+	    
+	    return head.next;
+	}
+}
