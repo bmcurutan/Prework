@@ -1,0 +1,27 @@
+# Programming > Two Pointers > Intersection Of Sorted Arrays
+
+public class Solution {
+	// DO NOT MODIFY THE LISTS
+	public ArrayList<Integer> intersect(final List<Integer> a, final List<Integer> b) {
+	    ArrayList<Integer> res = new ArrayList<Integer>();
+	    
+	    if (a == null || a.size() == 0 || b == null || b.size() == 0) {
+	        return res;
+	    }
+	    
+	    int i = 0, j = 0;
+	    while (i < a.size() && j < b.size()) {
+            if (a.get(i) < b.get(j)) {
+                i++;
+            } else if (a.get(i) > b.get(j)) {
+                j++;
+            } else {
+                res.add(a.get(i));
+                i++;
+                j++;
+            }
+	    }
+	    
+	    return res;
+	}
+}
