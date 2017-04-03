@@ -1,0 +1,37 @@
+# Programming > Linked Lists > Partition List
+
+/**
+ * Definition for singly-linked list.
+ * class ListNode {
+ *     public int val;
+ *     public ListNode next;
+ *     ListNode(int x) { val = x; next = null; }
+ * }
+ */
+public class Solution {
+	public ListNode partition(ListNode a, int b) {
+	    if (a == null || a.next == null) {
+	        return a;
+	    }
+	    
+	    ListNode left = new ListNode(-1);
+	    ListNode leftHead = left;
+	    ListNode right = new ListNode(-1);
+	    ListNode rightHead = right;
+	    
+	    ListNode curr = a;
+	    while (curr != null) {
+	        if (curr.val < b) {
+	            left.next = new ListNode(curr.val);
+	            left = left.next;
+	        } else {
+	            right.next = new ListNode(curr.val);
+	            right = right.next;
+	        }
+	        curr = curr.next;
+	    }
+	    
+	    left.next = rightHead.next;
+	    return leftHead.next;
+	}
+}
