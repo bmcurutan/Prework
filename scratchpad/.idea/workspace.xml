@@ -7,6 +7,7 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CodysJams.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CopyLL.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/DanceAroundTheClock.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/DeepestNodeInTree.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/FirstNonNegativeInteger.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/IO/A-large-practice.in" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/IO/A-small-practice.in" />
@@ -16,12 +17,14 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/IO/D-small-practice-1.in" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/IO/D-small-practice-2.in" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/KElement2SortedArrays.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Last2Letters.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/LongestBranchInTree.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/LongestDeadEndPath.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/NotDone/KSum0NArray.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/NotDone/LongestValidParentheses.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/NotDone/MaxSumSequence.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/NotDone/RedBlueBlueRed.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/NotDone/SumNodeBinaryTree.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/NotDone/TreeDescendants.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/NumDescendants.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OverlappingRanges.java" />
@@ -61,33 +64,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="NumDescendants.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/NumDescendants.java">
+      <file leaf-file-name="ZigZagTree.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ZigZagTree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
-              <folding>
-                <element signature="e#538#548#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BinaryTreeToArray.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/BinaryTreeToArray.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="KElement2SortedArrays.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/KElement2SortedArrays.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="27" column="9" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+            <state relative-caret-position="379">
+              <caret line="30" column="34" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -96,7 +77,7 @@
       <file leaf-file-name="CopyLL.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CopyLL.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
+            <state relative-caret-position="666">
               <caret line="41" column="25" selection-start-line="41" selection-start-column="25" selection-end-line="41" selection-end-column="25" />
               <folding>
                 <element signature="e#122#123#0" expanded="true" />
@@ -118,41 +99,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StringSubsets.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/StringSubsets.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PersonMoodPlace.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/PersonMoodPlace.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LongestBranchInTree.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LongestBranchInTree.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/LongestBranchInTree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="37" column="30" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="30" />
+            <state relative-caret-position="244">
+              <caret line="55" column="48" selection-start-line="49" selection-start-column="8" selection-end-line="55" selection-end-column="48" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MaxSumSequence.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/NotDone/MaxSumSequence.java">
+      <file leaf-file-name="DeepestNodeInTree.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DeepestNodeInTree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="954">
-              <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+            <state relative-caret-position="36">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Last2Letters.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Last2Letters.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-134">
+              <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SumNodeBinaryTree.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/NotDone/SumNodeBinaryTree.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="774">
+              <caret line="43" column="36" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -188,10 +169,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/NotDone/MeetingTime.java" />
-        <option value="$PROJECT_DIR$/src/NotDone/TimePlanner.java" />
-        <option value="$PROJECT_DIR$/src/TimePlanner.java" />
-        <option value="$PROJECT_DIR$/src/NotDone/ReversePolishNotation.java" />
         <option value="$PROJECT_DIR$/src/ReversePolishNotation.java" />
         <option value="$PROJECT_DIR$/src/NotDone/PrintTreeBreadthFirst.java" />
         <option value="$PROJECT_DIR$/src/NotDone/Solution.java" />
@@ -239,6 +216,10 @@
         <option value="$PROJECT_DIR$/src/StringSubsets.java" />
         <option value="$PROJECT_DIR$/src/PersonMoodPlace.java" />
         <option value="$PROJECT_DIR$/src/LongestBranchInTree.java" />
+        <option value="$PROJECT_DIR$/src/NotDone/DeepestNodeInTree.java" />
+        <option value="$PROJECT_DIR$/src/DeepestNodeInTree.java" />
+        <option value="$PROJECT_DIR$/src/Last2Letters.java" />
+        <option value="$PROJECT_DIR$/src/NotDone/SumNodeBinaryTree.java" />
       </list>
     </option>
   </component>
@@ -391,6 +372,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -443,9 +427,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -465,57 +446,7 @@
       <recent name="$PROJECT_DIR$/src/Input" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.LongestBranchInTree">
-    <configuration default="false" name="CopyLL" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="CopyLL" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="scratchpad" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="OverlappingRanges" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="OverlappingRanges" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="scratchpad" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="StringSubsets" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value=".*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="StringSubsets" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="scratchpad" />
-      <envs />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Application.SumNodeBinaryTree">
     <configuration default="false" name="PersonMoodPlace" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="PersonMoodPlace" />
@@ -534,6 +465,61 @@
     <configuration default="false" name="LongestBranchInTree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="LongestBranchInTree" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="scratchpad" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="DeepestNodeInTree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value=".*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="DeepestNodeInTree" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="scratchpad" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="Last2Letters" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="Last2Letters" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="scratchpad" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="SumNodeBinaryTree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="NotDone.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="NotDone.SumNodeBinaryTree" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -797,19 +783,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.CopyLL" />
-      <item index="1" class="java.lang.String" itemvalue="Application.OverlappingRanges" />
-      <item index="2" class="java.lang.String" itemvalue="Application.StringSubsets" />
-      <item index="3" class="java.lang.String" itemvalue="Application.PersonMoodPlace" />
-      <item index="4" class="java.lang.String" itemvalue="Application.LongestBranchInTree" />
+      <item index="0" class="java.lang.String" itemvalue="Application.PersonMoodPlace" />
+      <item index="1" class="java.lang.String" itemvalue="Application.LongestBranchInTree" />
+      <item index="2" class="java.lang.String" itemvalue="Application.DeepestNodeInTree" />
+      <item index="3" class="java.lang.String" itemvalue="Application.Last2Letters" />
+      <item index="4" class="java.lang.String" itemvalue="Application.SumNodeBinaryTree" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.LongestBranchInTree" />
-        <item index="1" class="java.lang.String" itemvalue="Application.PersonMoodPlace" />
-        <item index="2" class="java.lang.String" itemvalue="Application.StringSubsets" />
-        <item index="3" class="java.lang.String" itemvalue="Application.OverlappingRanges" />
-        <item index="4" class="java.lang.String" itemvalue="Application.CopyLL" />
+        <item index="0" class="java.lang.String" itemvalue="Application.SumNodeBinaryTree" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Last2Letters" />
+        <item index="2" class="java.lang.String" itemvalue="Application.DeepestNodeInTree" />
+        <item index="3" class="java.lang.String" itemvalue="Application.LongestBranchInTree" />
+        <item index="4" class="java.lang.String" itemvalue="Application.PersonMoodPlace" />
       </list>
     </recent_temporary>
   </component>
@@ -840,7 +826,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38727525" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38727525" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -881,27 +867,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/ReversePolishNotation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FlattenDict.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1026">
-          <caret line="57" column="10" selection-start-line="57" selection-start-column="10" selection-end-line="57" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/NotDone/RotateMatrix.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/src.zip!/java/io/FileReader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="166">
@@ -1063,19 +1028,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ZigZagTree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="30" column="34" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/PrintTreeBreadthFirst.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="522">
           <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1090,9 +1046,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#1916#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1135,7 +1088,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1150,7 +1102,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
           <caret line="34" column="10" selection-start-line="34" selection-start-column="10" selection-end-line="34" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1180,9 +1131,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
-          <folding>
-            <element signature="e#538#548#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1196,7 +1145,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/KElement2SortedArrays.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
+        <state relative-caret-position="486">
           <caret line="27" column="9" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
           <folding />
         </state>
@@ -1212,7 +1161,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CopyLL.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
+        <state relative-caret-position="666">
           <caret line="41" column="25" selection-start-line="41" selection-start-column="25" selection-end-line="41" selection-end-column="25" />
           <folding>
             <element signature="e#122#123#0" expanded="true" />
@@ -1241,8 +1190,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PersonMoodPlace.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
+        <state relative-caret-position="504">
           <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DeepestNodeInTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Last2Letters.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-134">
+          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ZigZagTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="30" column="34" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
           <folding />
         </state>
       </provider>
@@ -1257,8 +1230,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LongestBranchInTree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="37" column="30" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="30" />
+        <state relative-caret-position="244">
+          <caret line="55" column="48" selection-start-line="49" selection-start-column="8" selection-end-line="55" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/NotDone/SumNodeBinaryTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="774">
+          <caret line="43" column="36" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="36" />
           <folding />
         </state>
       </provider>
